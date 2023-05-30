@@ -14,8 +14,13 @@ type <%= Name %>Props = {};
 
 function <%= Name %>(props: <%= Name %>Props ) {
   const classes = useStyles();
+  
+  // FIXME: make sure you remove this
+  console.table(props);
 
-  return ();
+  return (
+    <div className={classes.root} />
+  );
 };
 
 <% if (memo) { -%>

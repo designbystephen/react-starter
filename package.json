@@ -18,7 +18,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint .",
     "pretty": "eslint . --fix && prettier . --write",
-    "generate": "hygen"
+    "generate": "hygen",
+    "storybook": "storybook dev -p 6006 -s public",
+    "build-storybook": "storybook build -s public"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +42,18 @@
   },
   "packageManager": "yarn@3.5.1",
   "devDependencies": {
+    "@mdx-js/react": "^1.6.22",
+    "@storybook/addon-actions": "^7.0.18",
+    "@storybook/addon-docs": "^7.0.18",
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/addon-mdx-gfm": "7.0.18",
+    "@storybook/node-logger": "^7.0.18",
+    "@storybook/preset-create-react-app": "^7.0.18",
+    "@storybook/react": "^7.0.18",
+    "@storybook/react-webpack5": "7.0.18",
+    "@storybook/testing-library": "^0.1.0",
     "@testing-library/dom": "^9.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -68,6 +82,7 @@
     "husky": "^8.0.3",
     "hygen": "^6.2.11",
     "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "storybook": "7.0.18"
   }
 }

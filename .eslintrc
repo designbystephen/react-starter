@@ -38,5 +38,19 @@
 
     // prefer typescript for typechecking
     "react/require-default-props": 0
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*" // storybook specific rules
+      ],
+      "rules": {
+        // multiple story exports are too common and useful
+        "import/no-anonymous-default-export": "off",
+
+        // prefer to create / reuse components in stories quickly vs verbosly
+        "react/function-component-definition": [0, { "unnamedComponents": "arrow-function" }]
+      }
+    }
+  ]
 }
