@@ -1,11 +1,11 @@
 import React from 'react';
-import { Preview } from '@storybook/react'
+import { Preview } from '@storybook/react';
 /* Add baseline styles to all components
   import Baseline from '../src/common/styles/Baseline';
   import '../src/common/styles/baseline.css';
 */
 
-const preview:Preview = {
+const preview: Preview = {
   decorators: [
     (Story) => (
       <>
@@ -14,18 +14,17 @@ const preview:Preview = {
         {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
         <Story />
       </>
-
     ),
   ],
   parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/,
       },
     },
-  }
+  },
 };
 
 export default preview;

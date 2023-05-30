@@ -49,7 +49,10 @@
         "import/no-anonymous-default-export": "off",
 
         // prefer to create / reuse components in stories quickly vs verbosly
-        "react/function-component-definition": [0, { "unnamedComponents": "arrow-function" }]
+        "react/function-component-definition": [
+          0,
+          { "unnamedComponents": "arrow-function" }
+        ]
       }
     }
   ]

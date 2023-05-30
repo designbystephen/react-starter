@@ -1,0 +1,15 @@
+# artifacts
+dist
+build
+public
+coverage
+
+# package managers
+node_modules
+.yarn
+.yarnrc.yml
+yarn.lock
+.pnp
+
+# templates/generators
+_templates
