@@ -10,3 +10,6 @@ node_modules
 .yarnrc.yml
 yarn.lock
 .pnp
+
+# templates/generators
+_templates
