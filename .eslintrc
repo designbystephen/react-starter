@@ -1,7 +1,6 @@
 {
+  "root": true,
   "extends": [
-    "react-app",
-    "react-app/jest",
     "airbnb",
     "airbnb-typescript",
     "plugin:jsx-a11y/recommended",
@@ -12,6 +11,14 @@
   },
   "plugins": ["jsx-a11y", "prettier"],
   "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["draft"] // allow reassignment for immer reducers
+      }
+    ],
+
     // allow tsx and jsx extensions to have jsx
     "react/jsx-filename-extension": [
       1,
@@ -28,11 +35,11 @@
 
     // typescript allows us to spread props more predictably although some options are problematic
     "react/jsx-props-no-spreading": [
-      2,
+      0, // disabled till I can find an alternative in eslint-typescript
       {
-        "html": "enforce", // html spread can be problematic
+        "html": "ignore", // html spread can be problematic so make sure we are using ts for valid props
         "custom": "ignore",
-        "explicitSpread": "enforce" // this usage is not very readable/useful
+        "explicitSpread": "ignore" // this usage is not very readable/useful
       }
     ],
 
@@ -53,6 +60,13 @@
           0,
           { "unnamedComponents": "arrow-function" }
         ]
+      }
+    },
+    {
+      "files": ["**/utils/**", "**/constants/**", "**/helpers/**"],
+      "rules": {
+        // these modules dirs are typically not going to have a default exports
+        "import/prefer-default-export": 0
       }
     }
   ]

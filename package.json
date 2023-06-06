@@ -23,12 +23,6 @@
     "storybook": "storybook dev -p 6006 -s public",
     "build-storybook": "storybook build -s public"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
