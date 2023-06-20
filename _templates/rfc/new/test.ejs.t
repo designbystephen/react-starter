@@ -10,7 +10,7 @@ describe('<%= Name %>', () => {
     expect(<%= Name %>).toBeDefined();
   });
 
-  it ('renders', () => {
+  it('renders', () => {
     render(<<%= Name %> />);
   });
 });
