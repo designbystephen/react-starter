@@ -115,7 +115,8 @@ I've included a basic configuration with this repo that basically reinforces wha
   - I've modified the `package.json` in this project to include this script
 - add `husky` and `lint-staged`
   - `$ yarn add --dev husky lint-staged`
-  - add `.huskyrc.json`
+  - newer projects can run `$ yarn dlx husky-init` for initial setup
+  - modify `.husky/pre-commit`
     - I've included this in the project repo
   - add `.lintstagedrc.json`
     - I've include this in the project repo
