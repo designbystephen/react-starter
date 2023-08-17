@@ -44,6 +44,9 @@ Makes sure that your IDE (vscode used here) understands the location of your yar
 - `$ yarn add --dev @yarnpkg/sdks`
 - `$ yarn sdks vscode`
 
+**NOTE: you may need to add the following base yarn sdks if support for eslint, typescript or prettier modules are failing**
+- `yarn dlx @yarnpkg/sdks base`
+
 ## Add Typescript Plugin
 
 This will automatically install available types for your dependencies as they are added to your project.
